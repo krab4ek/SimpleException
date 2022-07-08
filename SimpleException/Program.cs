@@ -18,6 +18,7 @@ catch (Exception e)
     Console.WriteLine($"Stack: {e.StackTrace}");
     Console.WriteLine($"Message: {e.Message}");
     Console.WriteLine($"Source: {e.Source}");
+    Console.WriteLine($"Help link: {e.HelpLink}");
     Console.WriteLine("\n**** Out of exception logic! ****");
 
 }

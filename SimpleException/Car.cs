@@ -37,8 +37,11 @@
                 {
                     CurrentSpeed = 0;
                     carIsDead = true;
-
-                    throw new Exception($"{PetName} has overheated!");
+                    Exception ex = new Exception($"{PetName} has overheated!");
+                    ex.HelpLink = "https://github.com/krab4ek" +
+                        " ***** Bog v pomosh! ****** ";
+                    throw ex;
+                    //throw new Exception($"{PetName} has overheated!");
                 }
                 else
                 {
