@@ -2,7 +2,7 @@
 Console.WriteLine("****** Simple Exception Example *****\n");
 Console.WriteLine($"=> Creating a car and stepping on it!");
 
-Car myCar = new Car("Zippy",45);
+Car myCar = new Car("Zippy", 45);
 myCar.CrankTunes(true);
 try
 {
@@ -12,7 +12,9 @@ try
 catch (Exception e)
 {
     Console.WriteLine("\n**** Error! ****");
-    Console.WriteLine($"Method: {e.TargetSite}");
+    Console.WriteLine($"Member name: {e.TargetSite}");
+    Console.WriteLine($"Class defining member: {e.TargetSite.DeclaringType}");
+    Console.WriteLine($"Member type: {e.TargetSite.MemberType}");
     Console.WriteLine($"Message: {e.Message}");
     Console.WriteLine($"Source: {e.Source}");
     Console.WriteLine("\n**** Out of exception logic! ****");
