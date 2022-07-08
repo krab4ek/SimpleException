@@ -40,6 +40,8 @@
                     Exception ex = new Exception($"{PetName} has overheated!");
                     ex.HelpLink = "https://github.com/krab4ek" +
                         " ***** Bog v pomosh! ****** ";
+                    ex.Data.Add("TimeStamp",$"The car exploaded at {DateTime.Now}");
+                    ex.Data.Add("Cause","You have a lead foot!");
                     throw ex;
                     //throw new Exception($"{PetName} has overheated!");
                 }

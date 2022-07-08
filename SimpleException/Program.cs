@@ -1,4 +1,5 @@
 ﻿using SimpleException;
+using System.Collections;
 Console.WriteLine("****** Simple Exception Example *****\n");
 Console.WriteLine($"=> Creating a car and stepping on it!");
 
@@ -18,6 +19,9 @@ catch (Exception e)
     Console.WriteLine($"Stack: {e.StackTrace}");
     Console.WriteLine($"Message: {e.Message}");
     Console.WriteLine($"Source: {e.Source}");
+    Console.WriteLine($"\n-> Custom Data:");
+    foreach (DictionaryEntry de in e.Data)
+        Console.WriteLine($"-> {de.Key}: {de.Value}");
     Console.WriteLine($"Help link: {e.HelpLink}");
     Console.WriteLine("\n**** Out of exception logic! ****");
 
